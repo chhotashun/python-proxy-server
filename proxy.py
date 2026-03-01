@@ -61,6 +61,7 @@ def handle_http(client_socket, request, host, port):
     request_line = temp.split()
     
     method = request_line[0]
+    # cache stores the full url http://example.com/80 and its values as recorded time and response
     cache_key =  request_line[1]
     
     if method == b'GET':
